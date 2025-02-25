@@ -1,12 +1,44 @@
 ---
+import Badge from '../components/Badge.astro';
 import Welcome from '../components/Welcome.astro';
+import GitHubIcon from '../components/Icons/GitHubIcon.astro'
 import Layout from '../layouts/Layout.astro';
+import LindkedInIcon from '../components/Icons/LindkedInIcon.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	
+<Layout title='Inicio'>
+	<main>
+      <section class="w-full lg:w-[740px] mx-auto  ">
+        <div class="container flex justify-end">
+        <img 
+        class=" opacity-80 w-100 h-120 mt-20"
+        src="/public/avatar.png"/>
+    </div>
+        <h1 class="text-5xl font-bold flex flex-row gap-4 pb-10">Hola, soy Mar <a href="" target="_blank" rel="noopener"  class="flex justify-center items-center"><Badge> Disponible para trabajar</Badge></a ></h1>
+        <h2 class="prose-2xl " ><span class="text-purple-400 opacity-50">Diseñadora UX y Desarrolladora junior.</span><span class="opacity-80" > Apasionada en crear experiencias digitales.</span> <span  class="text-purple-400 opacity-50">Especializándome en seguridad digital e IA.</span>
+        </h2>
+
+        <div class="flex justify-center items-center">
+        <ul>
+            <li>
+                <a href="">
+                  <GitHubIcon class="w-6 h-6"/>GitHub
+                </a>
+            </li>
+            <li>
+<a>
+    <a href="">
+        <LindkedInIcon class="w-6 h-6"/>LindkedIn
+    </a>
+</a>
+
+            </li>
+        </ul>
+    </div>
+    </section>
+    </main>
 
 </Layout>
