@@ -1,0 +1,4 @@
+@import 'tailwindcss';
+/* // Supports weights 300-800 */
+@import '@fontsource-variable/open-sans';
+@plugin '@tailwindcss/typography';
