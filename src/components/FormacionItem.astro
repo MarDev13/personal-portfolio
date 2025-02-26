@@ -1,0 +1,24 @@
+---
+ interface Props{
+    titulo: string;
+    descripcion: string;
+  
+}
+
+const { titulo, descripcion, } = Astro.props;
+---
+
+<div
+    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-purple-400"
+>
+</div>
+
+<h3 class="text-lg font-semibold text-gray-900 dark:text-purple-400 opacity-60 mb-2">
+   {titulo}
+</h3>
+<p class="prose mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+   {descripcion}
+</p>
+
+
+

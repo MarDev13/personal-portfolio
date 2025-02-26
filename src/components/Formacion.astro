@@ -1,0 +1,41 @@
+---
+import FormacionItem from "../components/FormacionItem.astro";
+
+const FORMACION = [
+    {
+       
+        titulo: "Desarrollo Web Full Stack – FEMPA (Finalizado)",
+        descripcion:
+            "Desarrollo de aplicaciones web con PHP, Symfony, Tailwind CSS, JavaScript y CMS. Creación de proyectos completos, optimizados y escalables, tanto en front-end como en back-end.",
+    },
+    {
+      
+        titulo: "IA y Prompt Engineering – Frounderz (Avalado por Microsoft) (Finalizado)",
+        descripcion:
+            "Optimización de interacciones con inteligencia artificial mediante prompt engineering, mejorando respuestas y automatizando procesos.",
+    },
+    {
+    
+        titulo: "Certificación en Diseño UX – Google (Coursera) (En curso)",
+        descripcion:
+            "Diseño de experiencias de usuario centradas en las personas, creando wireframes, prototipos y pruebas de usabilidad. Desarrollo de un portafolio profesional con proyectos reales.",
+    },
+    {
+     
+        titulo: "Seguridad Digital – Grupo Aspasia (En curso)",
+        descripcion:
+            "Gestión de riesgos informáticos, protección contra malware y phishing, cumplimiento del RGPD y fortalecimiento de sistemas frente a ciberamenazas.",
+    },
+   
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+        FORMACION.map((formacion) => (
+            <li class="mb-10 ms-4">
+                <FormacionItem {...formacion} />
+            </li>
+        ))
+    }
+</ol>
