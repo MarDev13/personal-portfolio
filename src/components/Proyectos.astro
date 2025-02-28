@@ -1,0 +1,52 @@
+---
+const PROYECTOS = [
+    {
+        title: "Tienda de Ropa Online – Plataforma E-Commerce",
+        description:
+            "Desarrollé una tienda de ropa ficticia con gestión de productos y usuarios, panel de administración, carrito de compras, categorías y sistema de autenticación. Además, cuenta con un registro de compras almacenado en la base de datos. Un proyecto funcional que integra backend y frontend para una experiencia fluida.",
+        image: "990shots_so.jpg",
+        link: "/proyecto1",
+        github: "",
+        tag: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Bootstrap"],
+    },
+];
+---
+
+{
+    PROYECTOS.map(({ image, title, description, link, github, tag }) => (
+        <div class="max-w-xl bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-purple-400/2 transition hover:scale-110 hover:bg-purple-400/5 dark:border-gray-700">
+            <a href="#">
+                <img
+                    class="rounded-t-lg"
+                    src={image}
+                    alt={`Captura de pantalla del proyecto ${image}`}
+                />
+            </a>
+
+            <ul>
+                <div class="flex justify-center">
+                    {tag.map((tag) => (
+                        <li
+                            class="rounded-full border border-white/10 items-center flex justify-center  bg-purple-400/5 
+                        hover:scale-110 hover:bg-purple-400/10
+                        transition gap-4 py-2 mt-8 px-1"
+                        >
+                            {tag}
+                        </li>
+                    ))}
+                </div>
+            </ul>
+
+            <div class="p-5">
+                <a href="#">
+                    <h5 class=" mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-purple-400 opacity-40">
+                        {title}
+                    </h5>
+                </a>
+                <p class="prose mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    {description}
+                </p>
+            </div>
+        </div>
+    ))
+}
