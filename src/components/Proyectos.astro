@@ -1,20 +1,39 @@
 ---
+import GitHubIcon from "./Icons/GitHubIcon.astro";
+
 const PROYECTOS = [
     {
         title: "Tienda de Ropa Online – Plataforma E-Commerce",
         description:
             "Desarrollé una tienda de ropa ficticia con gestión de productos y usuarios, panel de administración, carrito de compras, categorías y sistema de autenticación. Además, cuenta con un registro de compras almacenado en la base de datos. Un proyecto funcional que integra backend y frontend para una experiencia fluida.",
-        image: "990shots_so.jpg",
+        image: "433shots_so.png",
         link: "/proyecto1",
-        github: "",
+        github: "https://github.com/MarDev13/BaggyEmpire_tienda_ropa_ficticia",
         tag: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Bootstrap"],
     },
+
+    {
+        title:  "Web de Vinilos con Astro & Symfony",
+        description: "Desarrollé una web moderna y rápida con Astro, conectada a una API en Symfony. Permite a los usuarios explorar vinilos filtrados por categorías de manera eficiente y fluida. Anteriormente construí una API robusta para gestionar los datos de los vinilos, proporcionando endpoints optimizados para consultas rápidas y filtrados por categoría.",
+        image: "31shots_so.png",
+        link: "/proyecto2",
+        github:"https://github.com/MarDev13/web-vinyls-2000",
+        tag:["Symfony","Astro","JavaScript","TailwindCSS"]
+    },
+    {
+        title:  "Juego Arkanoid en JavaScript",
+        description: "Desarrollé un juego inspirado en Arkanoid usando JavaScript, HTML y CSS. Los jugadores deben romper bloques con una pelota mientras controlan la paleta.Guarda la puntuación y la reinicia al perder.",
+        image: "823shots_so.png",
+        link: "/proyecto3",
+        github:"https://github.com/MarDev13/game_inspired_by_arkanoid",
+        tag:["HTML","CSS","JavaScript"]
+    }
 ];
 ---
+<div class="flex flex-wrap justify-center gap-6">
+{PROYECTOS.map(({ image, title, description, link, github, tag }) => (
 
-{
-    PROYECTOS.map(({ image, title, description, link, github, tag }) => (
-        <div class="max-w-xl bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-purple-400/2 transition hover:scale-110 hover:bg-purple-400/5 dark:border-gray-700">
+        <div class="max-w-xl bg-white border border-gray-200 rounded-lg  shadow-purple-950 shadow-xl dark:bg-purple-400/2 transition hover:scale-110 hover:bg-purple-400/5 dark:border-gray-700">
             <a href="#">
                 <img
                     class="rounded-t-lg"
@@ -29,7 +48,7 @@ const PROYECTOS = [
                         <li
                             class="rounded-full border border-white/10 items-center flex justify-center  bg-purple-400/5 
                         hover:scale-110 hover:bg-purple-400/10
-                        transition gap-4 py-2 mt-8 px-1"
+                        transition gap-4 py-2 mt-8 px-1 "
                         >
                             {tag}
                         </li>
@@ -46,7 +65,13 @@ const PROYECTOS = [
                 <p class="prose mb-3 font-normal text-gray-700 dark:text-gray-400">
                     {description}
                 </p>
+                <a href={github} class="prose mb-3 font-normal text-gray-700 dark:text-gray-400"
+                target="_blank">
+               <p  >Code <GitHubIcon class="size-6"> </p>
+                </a>
             </div>
         </div>
+    
     ))
 }
+</div>

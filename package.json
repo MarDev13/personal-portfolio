@@ -11,10 +11,13 @@
   "dependencies": {
     "@fontsource-variable/open-sans": "^5.1.1",
     "@tailwindcss/vite": "^4.0.8",
-    "astro": "^5.3.1",
+    "alpinejs": "^3.14.9",
+    "astro": "^5.5.2",
+    "dotenv": "^16.4.7",
     "tailwindcss": "^4.0.8"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.16"
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/alpinejs": "^3.13.11"
   }
 }

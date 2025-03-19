@@ -1,84 +1,82 @@
 ---
 import Badge from "../components/Badge.astro";
-import Welcome from "../components/Welcome.astro";
-import GitHubIcon from "../components/Icons/GitHubIcon.astro";
 import Layout from "../layouts/Layout.astro";
-import LindkedInIcon from "../components/Icons/LindkedInIcon.astro";
 import SocialRedes from "../components/SocialRedes.astro";
-import EmailIcon from "../components/Icons/EmailIcon.astro"
-import FormacionIcon from "../components/Icons/FormacionIcon.astro"
+import GitHubIcon from "../components/Icons/GitHubIcon.astro";
+import LindkedInIcon from "../components/Icons/LindkedInIcon.astro";
+import EmailIcon from "../components/Icons/EmailIcon.astro";
+import FormacionIcon from "../components/Icons/FormacionIcon.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import Formacion from "../components/Formacion.astro";
-import ProjectIcon from "../components/Icons/ProjectIcon.astro";
 import Proyectos from "../components/Proyectos.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Formacion from "../components/Formacion.astro";
+import Modal from "../components/Modal.astro";
+import ProjectIcon from "../components/Icons/ProjectIcon.astro";
+import Footer from "../components/Footer.astro";
+import Formulario from "../components/Formulario.astro";
+import ContactoIcon from "../components/Icons/ContactoIcon.astro";
+import EmailRedes from "../components/EmailRedes.astro";
 ---
 
 <Layout title="Desarrolladora Web Junior | Frontend, Backend y Diseño UI/UX">
-    <main>
-       <SectionContainer id="top">
+    <main x-data="{ isOpen: false }">
+        <SectionContainer id="top">
             <div class="container flex justify-center">
                 <img
                     class="opacity-80 w-100 h-120 mt-10"
                     src="/public/avatar.png"
-                />
+                    @click="isOpen = true" 
+                    />
+              
+                <Modal />
             </div>
+            <p class="flex justify-center border-2 border-dashed border-purple-900 w-100 m-auto mb-2">Toca mi avatar para saber más sobre mí  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M419-80q-28 0-52.5-12T325-126L107-403l19-20q20-21 48-25t52 11l74 45v-328q0-17 11.5-28.5T340-760q17 0 29 11.5t12 28.5v472l-97-60 104 133q6 7 14 11t17 4h221q33 0 56.5-23.5T720-240v-160q0-17-11.5-28.5T680-440H461v-80h219q50 0 85 35t35 85v160q0 66-47 113T640-80H419ZM167-620q-13-22-20-47.5t-7-52.5q0-83 58.5-141.5T340-920q83 0 141.5 58.5T540-720q0 27-7 52.5T513-620l-69-40q8-14 12-28.5t4-31.5q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 17 4 31.5t12 28.5l-69 40Zm335 280Z"/></svg></p>
             <h1 class="text-5xl font-bold flex flex-row gap-4 pb-10">
-                Hola, soy Mar <a
-                    href=""
-                    target="_blank"
-                    rel="noopener"
-                    class="flex justify-center items-center"
-                    ><Badge> Disponible para trabajar</Badge></a
-                >
+                Hola, soy Mar
+                <a href="" target="_blank" rel="noopener" class="flex justify-center items-center">
+                    <Badge>Disponible para trabajar</Badge>
+                </a>
             </h1>
             <h2 class="prose-2xl">
-                <span class="text-purple-400 opacity-50"
-                    >Diseñadora UX y Desarrolladora junior.</span
-                ><span class="opacity-80">
-                    Apasionada en crear experiencias digitales.</span
-                >
-                <span class="text-purple-400 opacity-50"
-                    >Especializándome en seguridad digital e IA.</span
-                >
+                <span class="text-purple-400 opacity-50">Diseñadora UX y Desarrolladora junior.</span>
+                <span class="opacity-80"> Si puedo pensarlo, puedo convertirlo en una experiencia digital.</span>
+                <br><span class="text-purple-400 opacity-50">Especializándome en IA.</span>
             </h2>
 
             <div class="flex justify-center items-center">
                 <nav class="flex gap-2">
                     <SocialRedes href="https://github.com/MarDev13">
-                        <GitHubIcon class="size-6" />GitHub
+                        <GitHubIcon class="size-6" /> GitHub
                     </SocialRedes>
 
-                    <SocialRedes>
-                        <LindkedInIcon class="size-6" />LindkedIn
+                    <SocialRedes href="https://www.linkedin.com/in/mar-mart%C3%ADnez-a4280b357/">
+                        <LindkedInIcon class="size-6" /> LindkedIn
                     </SocialRedes>
-                    <SocialRedes>
-                        <EmailIcon class="size-6" />mardevvdesign@gmail.com
-                    </EmailIcon>
+
+                    <EmailRedes href="#contacto" target="_self">
+                        <EmailIcon class="size-6" /> mardevvdesign@gmail.com
+                    </EmailRedes>
                 </nav>
             </div>
         </SectionContainer>
 
-
-
         <SectionContainer id="proyectos">
-    
-           <h2 class="text-3xl font-semibold opacity-80 flex gap-3 items-center mt-20 mb-15"> <ProjectIcon class="size-4"/>Proyectos</h2>
-    
-        <Proyectos/>
-      
-    </SectionContainer>
-
-<SectionContainer id="sobre-mi">
-    
-        <h2 class="text-3xl font-semibold opacity-80 flex gap-3 items-center mt-20 mb-15"><FormacionIcon class="size-4"/>Formación</h2>
-
-    <Formacion/>
-  
-</SectionContainer>
-
-
+            <h2 class="text-3xl font-semibold opacity-80 flex gap-3 items-center mt-20 mb-15">
+                <ProjectIcon class="size-4" /> Proyectos
+            </h2>
+            <Proyectos />
+        </SectionContainer>
+        <SectionContainer id="contacto">
+            <h2 class="text-3xl font-semibold opacity-80 flex gap-3 items-center mt-20 mb-15">
+             <ContactoIcon class="size-4"/>  Contacto
+            </h2>
+            <Formulario/>
+        </SectionContainer>
+        <SectionContainer id="sobre-mi">
+            <h2 class="text-3xl font-semibold opacity-80 flex gap-3 items-center mt-20 mb-15">
+                <FormacionIcon class="size-4" /> Formación
+            </h2>
+            <Formacion />
+        </SectionContainer>
     </main>
+    <Footer/>
 </Layout>
