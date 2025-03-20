@@ -33,7 +33,7 @@ const PROYECTOS = [
 <div class="flex flex-wrap justify-center gap-6">
 {PROYECTOS.map(({ image, title, description, link, github, tag }) => (
 
-        <div class="max-w-xl border-gray-200 rounded-lg  shadow-purple-950 shadow-xl dark:bg-purple-400/2 transition hover:scale-110 hover:bg-purple-400/5 dark:border-gray-700">
+        <div class="max-w-xl rounded-lg  shadow-purple-950 shadow-xl dark:bg-purple-400/2 transition hover:scale-110 hover:bg-purple-400/5 dark:border-gray-700">
             <a href="#">
                 <img
                     class="rounded-t-lg"
@@ -58,14 +58,14 @@ const PROYECTOS = [
 
             <div class="p-5">
                 <a href="#">
-                    <h5 class=" mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-purple-400 opacity-40">
+                    <h5 class=" mb-2 text-xl font-bold tracking-tight  dark:text-purple-400 opacity-40">
                         {title}
                     </h5>
                 </a>
-                <p class="prose mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <p class="prose mb-3 font-normal dark:text-gray-400">
                     {description}
                 </p>
-                <a href={github} class="prose mb-3 font-normal text-gray-700 dark:text-gray-400"
+                <a href={github} class="prose mb-3 font-normal dark:text-gray-400"
                 target="_blank">
                <p  >Code <GitHubIcon class="size-6"> </p>
                 </a>
