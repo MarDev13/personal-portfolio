@@ -17,7 +17,7 @@ const { title } = Astro.props;
 	<head>
 		<script>
 			(function (){
-				document.documentElement.setAttribute("data-theme","dark");
+				document.body.setAttribute("data-theme","dark");
 				localStorage.setItem("theme", "dark")    
 			}) ();
 			
@@ -42,7 +42,7 @@ const { title } = Astro.props;
 
 <style>
 	:root {
-		color-scheme: dark;
+		color-scheme: light dark;
 	}
 	html {
 		font-family: "Open Sans Variable", sans-serif;
