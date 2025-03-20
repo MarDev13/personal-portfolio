@@ -1,26 +1,38 @@
-<p class="prose mb-5">Las mejores ideas nacen compartiéndolas. Cuéntame la tuya y veamos cómo podemos hacerla realidad.</p>
-<div class="bg-purple-900/8 pt-10 pb-10 border-1 border-stone-500 border-dashed" style="border-radius: 1rem;">
+<div class="bg-purple-900/8 pt-10 pb-10 border-1 border-stone-500 border-dashed rounded-xl">
+  <form action="https://getform.io/f/aroypjmb" method="POST" class="max-w-lg mx-auto space-y-4">
+    
 
-  <form action="https://getform.io/f/aroypjmb" method="POST">
-    <div class="flex justify-center">
-    <label class="opacity-80 mr-1" for="name">Nombre</label>
-    <input class="max-sm:w-15 placeholder:text-xs place-content-center  mr-20 bg-gray-800 opacity-80 border-2 border-gray-700 text-center" type="text" name="name" placeholder="Escribe tu nombre aquí" style="border-radius: 1rem;" />
- 
-    <label class="opacity-80 mr-1" for="email">Correo electrónico</label>
-    <input class="max-sm:w-15 placeholder:text-xs place-content-center bg-gray-800 opacity-80 border-2 border-gray-700 text-center" type="email" name="email" required placeholder="Ejemplo@gmail.com" style="border-radius: 1rem;"/>
+    <div class="flex flex-wrap justify-center gap-4">
+      <div class="flex flex-col w-full max-w-xs">
+        <label class="opacity-80" for="name">Nombre</label>
+        <input class="w-full bg-gray-800 opacity-80 border-2 border-gray-700 text-center p-2 rounded-xl placeholder:text-xs" type="text" name="name" placeholder="Escribe tu nombre aquí"/>
+      </div>
+
+      <div class="flex flex-col w-full max-w-xs">
+        <label class="opacity-80" for="email">Correo electrónico</label>
+        <input class="w-full bg-gray-800 opacity-80 border-2 border-gray-700 text-center p-2 rounded-xl placeholder:text-xs" type="email" name="email" required placeholder="Ejemplo@gmail.com"/>
+      </div>
     </div>
-    <div class="flex justify-center mt-10">
-    <label class="opacity-80 mr-1" for="asunto">Asunto</label>
-    <textarea  class="place-content-center mr-40 placeholder:text-xs bg-gray-800 opacity-80 border-2 border-gray-700  text-center" name="subject:" required style="border-radius:1rem"; placeholder="Escribe el asunto aquí"></textarea>
 
-    <label class="opacity-80 mr-1" for="message">Mensaje</label>
-    <textarea class=" placeholder:text-xs place-content-center bg-gray-800 opacity-80 border-2 border-gray-700  text-center align-text-top" name="message" required placeholder="Escribe el mensaje aquí" style="border-radius: 1rem;"></textarea>
   
-  </div>
+    <div class="flex flex-col w-full max-w-lg mx-auto">
+      <label class="opacity-80" for="asunto">Asunto</label>
+      <input class="w-full bg-gray-800 opacity-80 border-2 border-gray-700 text-center p-2 rounded-xl placeholder:text-xs" type="text" name="subject" required placeholder="Escribe el asunto aquí"/>
+    </div>
+
   
-   <input type="hidden" name="_gotcha" style="display:none !important">
-   <div class="flex justify-center ">
-   <input class="hover:bg-gray-800 hover:scale-110 rounded-2xl w-20 opacity-80"  type="submit" value="enviar">
-   </div>
+    <div class="flex flex-col w-full max-w-lg mx-auto">
+      <label class="opacity-80" for="message">Mensaje</label>
+      <textarea class="w-full bg-gray-800 opacity-80 border-2 border-gray-700 text-center p-2 rounded-xl placeholder:text-xs h-32 resize-none" name="message" required placeholder="Escribe el mensaje aquí"></textarea>
+    </div>
+
+    <input type="hidden" name="_gotcha" style="display:none !important">
+
+   
+    <div class="flex justify-center">
+      <input class="hover:bg-gray-800 hover:scale-110 rounded-2xl w-24 opacity-80 p-2 bg-gray-700 text-white" type="submit" value="Enviar">
+    </div>
+
   </form>
 </div>
+
