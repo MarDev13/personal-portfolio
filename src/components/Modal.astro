@@ -15,16 +15,16 @@ import ProjectIcon from "./Icons/ProjectIcon.astro";
         <div class="relative rounded-lg  backdrop-blur-md" style="background-image: url(/images/bgmodal.png); ">
             <!-- Modal header -->
             <div
-                class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200"
+                class="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-600 "
             >
             <div class=" opacity-80 rounded-bl-full rounded-tr-full border-2 w-100 border-neutral-800" style="background-color:rgb(132, 111, 151) ;">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-neutral-800 text-center">
+                <h3 class="text-xl font-semibold  text-neutral-800 text-center">
                     ¡Hola! Soy Mar, tu desarrolladora web.
                 </h3>
             </div>
                 <button
                     type="button"
-                    class="text-gray-400 bg-transparent hover:bg-purple-400 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-purple-400 dark:hover:text-white"
+                    class="text-gray-400 bg-transparent  rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center hover:bg-purple-400 hover:text-white"
                     data-modal-hide="default-modal"
                     @click="isOpen = false"
                 >
@@ -48,26 +48,26 @@ import ProjectIcon from "./Icons/ProjectIcon.astro";
             <!-- Modal body -->
             <div class="prose prose-gray p-4 md:p-5 space-y-4">
                 <p
-                    class="text-base leading-relaxed text-gray-500 dark:text-neutral-800"
+                    class="text-base leading-relaxed  text-neutral-800"
                 >
                 Soy desarrolladora web con experiencia en JavaScript, PHP y MySQL, usando Symfony para APIs, Tailwind CSS y Bootstrap para diseñar interfaces atractivas. También trabajo con Astro para crear sitios rápidos y con Figma para diseño UX/UI.
 
                 <br><strong style="background:rgb(132, 111, 151)">Te acompañaré en todo el proceso, desde el diseño hasta que tu web esté completamente operativa.</strong>
                 </p>
                 <p
-                    class="text-base leading-relaxed text-gray-500 dark:text-neutral-800"
+                    class="text-base leading-relaxed text-neutral-800"
                 >
                 Me encantaría ayudarte a crear la web de tus sueños. Una web que haga crecer tu negocio y lo haga accesible a más personas, ¡todo el tiempo y desde cualquier lugar!
                 </p>
             </div>
             <!-- Modal footer -->
             <div
-                class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600"
+                class="flex items-center p-4 md:p-5 border-t  rounded-b border-gray-600"
             >
                 <button
                     data-modal-hide="default-modal"
                     type="button"
-                    class="py-2.5 px-5 ms-3 text-sm font-medium text-neutral-800 focus:outline-none rounded-lg border border-neutral-800 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-neutral-800 dark:border-gray-600 dark:hover:text-white dark:hover:bg-purple-800" style="background-color:rgb(132, 111, 151) ;background-h"
+                    class="py-2.5 px-5 ms-3 text-sm font-medium  focus:outline-none rounded-lg border   focus:z-10 focus:ring-4  focus:ring-gray-700 text-neutral-800 border-gray-600 hover:text-white hover:bg-purple-800" style="background-color:rgb(132, 111, 151) ;background-h"
                     @click="isOpen = false">¡Hasta pronto!</button
                 >
             </div>
